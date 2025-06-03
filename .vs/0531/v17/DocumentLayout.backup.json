@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity\\0531\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|d:\\unity\\0531\\assets\\scripts\\yayafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\yayafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\playercontrol2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\berrycollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\berrycollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\applecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\applecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|D:\\Unity\\0531\\assets\\scripts\\allcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A1064E1-DCED-F397-B025-D33DA1FBE61E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\allcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerControl2.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\PlayerControl2.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl2.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\PlayerControl2.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl2.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA9wA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T11:56:04.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerControl.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\PlayerControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\PlayerControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvw8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T11:58:27.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T08:52:49.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AllControl.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\AllControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AllControl.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\AllControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AllControl.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T08:36:19.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Finish.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\Finish.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\Finish.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Finish.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:56:45.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "YaYaFollow.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\YaYaFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\YaYaFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\YaYaFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T03:16:27.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BerryCollection.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\BerryCollection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BerryCollection.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\BerryCollection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BerryCollection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T03:13:01.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppleCollection.cs",
+              "DocumentMoniker": "D:\\Unity\\0531\\Assets\\Scripts\\AppleCollection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AppleCollection.cs",
+              "ToolTip": "D:\\Unity\\0531\\Assets\\Scripts\\AppleCollection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AppleCollection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:39:01.777Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

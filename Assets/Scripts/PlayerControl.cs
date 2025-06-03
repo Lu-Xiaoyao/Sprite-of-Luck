@@ -1,0 +1,93 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerControl : MonoBehaviour
+{
+    protected Rigidbody2D m_rb;
+    protected Transform m_transform;
+    protected Animator m_anim;
+    protected SpriteRenderer m_sprite;
+    protected BoxCollider2D m_coll;
+    [SerializeField] protected GameObject spawnPoint;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float jmpSpeed;
+    [SerializeField] protected LayerMask jumpableGround;
+    [SerializeField] protected float MinHeight;
+
+    // Start is called before the first frame update
+    protected virtual void Start()
+    {
+        m_rb = gameObject.GetComponent<Rigidbody2D>();
+        m_transform = gameObject.GetComponent<Transform>();
+        m_anim = gameObject.GetComponent<Animator>();
+        m_sprite = gameObject.GetComponent <SpriteRenderer>();
+        m_coll = gameObject.GetComponent<BoxCollider2D>();
+        spawnPoint = GameObject.Find("SpawnPoint"); 
+        moveSpeed = 12f;
+        jmpSpeed = 100f;
+        MinHeight = -6.0f;
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.transform.position;
+        }
+
+    }
+    protected virtual void FixedUpdate()
+    {
+        KeyMove();
+        if (m_transform.position.y < MinHeight)
+        {
+            Die();
+        }
+    }
+    protected void KeyMove()
+    {
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    Debug.Log("W pressed");
+        //}
+        if (Input.GetKeyDown(KeyCode.W) && IsGround())
+        {
+            m_rb.velocity = Vector2.up * jmpSpeed;
+            //m_anim.SetFloat("state", 2);
+            //Debug.Log("W pressed");
+        }
+        else if(Input.GetKey(KeyCode.A))
+        {
+            m_rb.velocity = Vector2.left * moveSpeed;
+            //m_anim.SetFloat("state", 1);
+            m_sprite.flipX = true;
+            //Debug.Log("A pressed");
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            m_rb.velocity = Vector2.right * moveSpeed;
+            //m_anim.SetFloat("state", 1);
+            m_sprite.flipX = false;
+            //Debug.Log("D pressed");
+        }
+        //else 
+        //{
+        //    m_anim.SetFloat("state", 0);
+        //}
+        m_anim.SetFloat("horizontal", m_rb.velocity.x);
+        m_anim.SetFloat("vertical",m_rb.velocity.y);
+        m_anim.SetFloat("speed", m_rb.velocity.magnitude);
+    }
+    public bool IsGround()
+    {
+        return Physics2D.BoxCast(m_coll.bounds.center, m_coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+    public void Die()
+    {
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.transform.position;
+        }
+    }
+    public float GetJumpSpeed()
+    { return jmpSpeed; }
+    public float GetMoveSpeed()
+    { return moveSpeed; }
+}
