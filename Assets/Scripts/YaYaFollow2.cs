@@ -1,89 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class YaYaFollow2 : MonoBehaviour
+using static AllControl;
+/// <summary>
+/// 第二关雅雅的移动控制，因为这次不但跟随而且要同步动作，和第一关的自身脚本没啥关系，继承自PlayerControll
+/// </summary>
+public class YaYaFollow2 : PlayerControl
 {
     //持有组件
     [SerializeField] protected Transform player_tran;
-    [SerializeField] protected Transform m_tran;
-    protected PlayerControl2 player_control;
-    protected Animator m_anim;
-    protected Rigidbody2D m_rb;
-    protected GameObject spawnPoint;
-    protected SpriteRenderer m_sprite;
     //跟随相关：标准距离以及目标位置
-    protected float XDistince;
-    protected float XTarget;
-    protected float MinHeight;
-    protected float jmpSpeed;
-    protected float moveSpeed;
-    // Start is called before the first frame update
-    void Start()
+    protected float XDistance;
+    protected override void Start()
     {
+        base.Start();
+        //各种组件持有
         player_tran = GameObject.Find("Player").transform;
-        m_tran = gameObject.GetComponent<Transform>();
-        player_control = GameObject.Find("Player").GetComponent<PlayerControl2>();
-        m_anim = gameObject.GetComponent<Animator>();
-        m_rb = gameObject.GetComponent<Rigidbody2D>();
-        spawnPoint = GameObject.Find("SpawnPointYaYa");
-        m_sprite = gameObject.GetComponent<SpriteRenderer>();
-        jmpSpeed = player_control.GetJumpSpeed();
-        moveSpeed = player_control.GetMoveSpeed();
-        MinHeight = -6.0f;
-        if (spawnPoint != null)
-        {
-            m_tran.position = spawnPoint.transform.position;
-        }
-        XDistince = player_tran.position.x - m_tran.position.x;
+        //XDistince = player_tran.position.x - m_transform.position.x;
     }
-    protected void FixedUpdate()
+    protected override void Update()
     {
-        YaYaMove();
+        base.Update();
         PositionFix();
-        if (m_tran.position.y < MinHeight)
-        {
-            Die();
-            GameObject.Find("Player").GetComponent<PlayerControl2>().Die();
-        }
     }
-    protected void YaYaMove()
-    {
-        if (Input.GetKeyDown(KeyCode.W) && player_control.IsGround())
-        {
-            m_rb.velocity = Vector2.up * jmpSpeed;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            m_rb.velocity = Vector2.left * moveSpeed;
-            m_sprite.flipX = true;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            m_rb.velocity = Vector2.right * moveSpeed;
-            m_sprite.flipX = false;
-        }
-        m_anim.SetFloat("horizontal", m_rb.velocity.x);
-        m_anim.SetFloat("vertical", m_rb.velocity.y);
-        m_anim.SetFloat("speed", m_rb.velocity.magnitude);
-        
-    }
+    /// <summary>
+    /// 雅雅x坐标位置自动修正，如果和玩家错开自动跟随归位
+    /// 不会自动跳跃、踩空会掉下去，要求玩家同时关注两条路况
+    /// </summary>
     protected void PositionFix()
     {
-        XTarget = player_tran.position.x - XDistince;
-        m_tran.Translate(new Vector3(XTarget - m_tran.position.x, 0, 0), Space.Self);
-        m_anim.SetFloat("horizontal", XTarget - m_tran.position.x);
+        XDistance = player_tran.position.x - m_transform.position.x;
+        if(XDistance > 0.5f || XDistance < -0.5f)
+        {
+            m_rb.velocity = new Vector2(Mathf.Sign(XDistance) * moveSpeed, m_rb.velocity.y);
+        }
+        //m_transform.Translate(new Vector3(XTarget - m_transform.position.x, 0, 0), Space.Self);
+        m_anim.SetFloat("horizontal", m_rb.velocity.x);
         m_anim.SetFloat("vertical", m_rb.velocity.y);
-        m_anim.SetFloat("speed", XTarget - m_tran.position.x + m_rb.velocity.y);
+        m_anim.SetFloat("speed", m_rb.velocity.x + m_rb.velocity.y);
         //Target = player.position - Distince;
-        //m_anim.SetFloat("speed", Target.x - m_tran.position.x + Target.y - m_tran.position.y);
-        //m_sprite.flipX = (Target.x < m_tran.position.x);
-        //m_anim.SetFloat("horizontal", Target.x - m_tran.position.x);
+        //m_anim.SetFloat("speed", Target.x - m_transform.position.x + Target.y - m_transform.position.y);
+        //m_sprite.flipX = (Target.x < m_transform.position.x);
+        //m_anim.SetFloat("horizontal", Target.x - m_transform.position.x);
         //m_anim.SetFloat("vertical", m_rb.velocity.y);
-        //m_tran.Translate(new Vector3(Target.x - m_tran.position.x, Target.y - m_tran.position.y, 0), Space.Self);
-    }
-    public void Die()
-    {
-        m_tran.position = spawnPoint.transform.position;
+        //m_transform.Translate(new Vector3(Target.x - m_transform.position.x, Target.y - m_transform.position.y, 0), Space.Self);
     }
 }

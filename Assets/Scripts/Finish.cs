@@ -5,14 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
-    //判定脚本挂在YaYa身上，与主角相会即关卡完成
+    //判定脚本挂在触发器上，与两个主角均发生触碰即关卡完成
     private bool LevelCompleted = false;
+    private int collisionCount = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !LevelCompleted)
         {
-            LevelCompleted = true;
-            Invoke("CompleteLevel", 2f);
+            collisionCount++;
+            if(collisionCount == 2)
+            {
+                LevelCompleted = true;
+                Invoke("CompleteLevel", 2f);
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !LevelCompleted)
+        {
+            collisionCount--;
         }
     }
     private void CompleteLevel()

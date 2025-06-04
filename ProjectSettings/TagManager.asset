@@ -8,6 +8,7 @@ TagManager:
   - Strawberry
   - Respawn2
   - RespawnCamera
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -47,6 +48,9 @@ TagManager:
     locked: 0
   - name: background
     uniqueID: 1864597199
+    locked: 0
+  - name: Introductions
+    uniqueID: 2447917181
     locked: 0
   - name: Default
     uniqueID: 0
