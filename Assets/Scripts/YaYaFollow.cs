@@ -42,6 +42,7 @@ public class YaYaFollow : MonoBehaviour
         XMax = 91.94f;
         XDistince = player.position.x - m_tran.position.x;
     }
+
     protected void FixedUpdate()
     {
         YaYaMove();
@@ -50,7 +51,7 @@ public class YaYaFollow : MonoBehaviour
     {
         XTarget = player.position.x - XDistince;
         XTarget = XTarget > XMax ? XMax : XTarget;
-        if(XTarget > m_tran.position.x)
+        if (Mathf.Abs(XTarget - m_tran.position.x) > 0.1f)
         {
             m_tran.Translate(new Vector3(XTarget-m_tran.position.x, 0, 0),Space.Self);
             m_anim.SetFloat("horizontal", 1);

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
 {
     //判定脚本挂在触发器上，与两个主角均发生触碰即关卡完成
-    private bool LevelCompleted = false;
+    protected static internal bool LevelCompleted = false;
     private int collisionCount = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,6 +31,7 @@ public class Finish : MonoBehaviour
     {
         Debug.Log("Level completed, loading next scene...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelCompleted = false;
     }
 }
 

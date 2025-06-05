@@ -13,6 +13,7 @@ public class PlayerDeath : MonoBehaviour
     protected Animator m_anim;
     protected GameObject spawnPoint;
     protected PlayerDeath f_death;
+    protected PlayerControl m_control;
     [SerializeField] protected float MinHeight;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class PlayerDeath : MonoBehaviour
             f_name = "Player";
         m_transform = gameObject.GetComponent<Transform>();
         m_anim = gameObject.GetComponent <Animator>();
+        m_control = gameObject.GetComponent<PlayerControl>();
         MinHeight = GameManager.Instance.MinHeight;
         f_death = GameObject.Find(f_name).GetComponent<PlayerDeath>();
         spawnPoint = GameObject.Find("SpawnPoint"+m_name);
@@ -52,13 +54,26 @@ public class PlayerDeath : MonoBehaviour
                 f_death.Die();
             }
         }
+        //if (collision.gameObject.CompareTag("Player") && Finish.LevelCompleted == false)
+        //{
+        //    Die();
+        //    if (f_death != null)
+        //    {
+        //        f_death.Die();
+        //    }
+        //}
     }
     protected internal void Die()
     {
         if (spawnPoint != null)
         {
-            m_anim.SetTrigger("death");
-            Invoke("Respawn", 2f);
+            //m_anim.SetTrigger("death");
+            if(m_control != null)
+            {
+                m_control.enabled = false;
+            }
+            //Invoke("Respawn", 2f);
+            Respawn();
         }
     }
 
@@ -67,5 +82,9 @@ public class PlayerDeath : MonoBehaviour
         m_anim.ResetTrigger("death");
         m_anim.SetTrigger("respawn");
         transform.position = spawnPoint.transform.position;
+        if (m_control != null)
+        {
+            m_control.enabled = true;
+        }
     }
 }
