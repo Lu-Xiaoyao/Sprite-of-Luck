@@ -6,10 +6,13 @@ TagManager:
   tags:
   - Apple
   - Strawberry
-  - Respawn2
-  - RespawnCamera
   - Trap
   - Platform
+  - ButtonPink
+  - Barrier
+  - ButtonBlue
+  - Respawn2
+  - RespawnCamera
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - ground
+  - Ground
   - 
   - 
   - 

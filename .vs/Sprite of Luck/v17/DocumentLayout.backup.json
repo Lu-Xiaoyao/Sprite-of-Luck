@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "D:\\GitProjects\\Sprite of Luck\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\returnbeginscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\returnbeginscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\playerdeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerdeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\platformmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\platformmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\yayafollow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\yayafollow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\yayafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\yayafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\input actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\input actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\platformstick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\platformstick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\applecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +33,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\allcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\allcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\platformmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\platformmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\platformstick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\platformstick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\buttonpress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonpress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\barriervanish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\barriervanish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\playerdeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerdeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\yayafollow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\yayafollow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\yayafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\yayafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +70,133 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "ReturnBeginScene.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\ReturnBeginScene.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ReturnBeginScene.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\ReturnBeginScene.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ReturnBeginScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T15:08:55.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StartGame.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\StartGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StartGame.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\StartGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StartGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T15:03:37.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Input Actions.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Input Actions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Input Actions.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Input Actions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Input Actions.cs",
+              "ViewState": "AgIAAHABAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T14:13:35.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ButtonPress.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\ButtonPress.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonPress.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\ButtonPress.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ButtonPress.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T04:19:30.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlatformMove.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlatformMove.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformMove.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlatformMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T11:11:18.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlayerDeath.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerDeath.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerDeath.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerDeath.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerDeath.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:24:03.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "YaYaFollow2.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow2.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow2.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow2.cs",
+              "RelativeToolTip": "Assets\\Scripts\\YaYaFollow2.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAArwCYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T04:47:19.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "YaYaFollow.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\YaYaFollow.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwCEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T05:15:59.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AllControl.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AllControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AllControl.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AllControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AllControl.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T03:36:19.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Finish.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Finish.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Finish.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Finish.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T04:55:51.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PlatformStick.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformStick.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlatformStick.cs",
@@ -58,90 +204,47 @@
               "RelativeToolTip": "Assets\\Scripts\\PlatformStick.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAIwA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T12:56:42.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T12:56:42.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlatformMove.cs",
-              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlatformMove.cs",
-              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformMove.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlatformMove.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCMAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "BarrierVanish.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\BarrierVanish.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BarrierVanish.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\BarrierVanish.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BarrierVanish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T11:11:18.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerDeath.cs",
-              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerDeath.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerDeath.cs",
-              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerDeath.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerDeath.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAcwDMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:24:03.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T04:28:56.517Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwDkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T05:21:20.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl.cs",
               "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerControl.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwCoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T03:32:53.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T03:32:53.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "YaYaFollow2.cs",
-              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow2.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow2.cs",
-              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow2.cs",
-              "RelativeToolTip": "Assets\\Scripts\\YaYaFollow2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T04:47:19.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "YaYaFollow.cs",
-              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow.cs",
-              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\YaYaFollow.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAwDkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T05:15:59.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Finish.cs",
-              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Finish.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
-              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Finish.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Finish.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA8wA8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T04:55:51.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "AppleCollection.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AppleCollection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AppleCollection.cs",
@@ -150,18 +253,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T04:50:00.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AllControl.cs",
-              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AllControl.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AllControl.cs",
-              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AllControl.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AllControl.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T03:36:19.523Z"
             }
           ]
         }

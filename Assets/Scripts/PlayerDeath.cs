@@ -28,7 +28,7 @@ public class PlayerDeath : MonoBehaviour
         m_control = gameObject.GetComponent<PlayerControl>();
         MinHeight = GameManager.Instance.MinHeight;
         f_death = GameObject.Find(f_name).GetComponent<PlayerDeath>();
-        spawnPoint = GameObject.Find("SpawnPoint"+m_name);
+        spawnPoint = GameObject.Find("SpawnPoints/SpawnPoint" + m_name);
         Debug.Log("SpawnPoint" + m_name);
     }
 

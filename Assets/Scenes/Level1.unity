@@ -8175,7 +8175,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9, y: 2.7, z: -14.4}
+  m_LocalPosition: {x: 13.71, y: 14.4, z: -14.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8198,6 +8198,7 @@ MonoBehaviour:
   XMin: 0
   YMin: 0
   Z: 0
+  cameraSpeed: 0
 --- !u!1001 &542357812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8332,7 +8333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610823798}
   m_Layer: 0
-  m_Name: SpawnPointCamera
+  m_Name: MinPointCamera
   m_TagString: Respawn
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -46040,37 +46041,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3235246353927984826, guid: ec60aadd45ec52747881f01b4268db49, type: 3}
   m_PrefabInstance: {fileID: 1664054656}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1690881619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1690881620}
-  m_Layer: 0
-  m_Name: SpawnPointVirtual
-  m_TagString: Respawn
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1690881620
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690881619}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1704775565}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1704775564
 GameObject:
   m_ObjectHideFlags: 0
@@ -46105,7 +46075,6 @@ Transform:
   - {fileID: 610823798}
   - {fileID: 1333167246}
   - {fileID: 625494076}
-  - {fileID: 1690881620}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1902606022
@@ -46574,11 +46543,11 @@ PrefabInstance:
       objectReference: {fileID: 860262151}
     - target: {fileID: 4496277676826682715, guid: ac230818cf062514099d065bfc719e64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.31
+      value: -10.66
       objectReference: {fileID: 0}
     - target: {fileID: 4496277676826682715, guid: ac230818cf062514099d065bfc719e64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 4496277676826682715, guid: ac230818cf062514099d065bfc719e64, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46612,9 +46581,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5503806089770059404, guid: ac230818cf062514099d065bfc719e64, type: 3}
+      propertyPath: m_Name
+      value: CameraPointPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 6107584605991268580, guid: ac230818cf062514099d065bfc719e64, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148695684726428092, guid: ac230818cf062514099d065bfc719e64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -24,5 +24,8 @@ public class AllControl : MonoBehaviour
         public float moveSpeed = 12f;
         public float jumpSpeed = 100f;
         public float MinHeight = -6f;
+        public float cameraSpeed = 0.5f;
+        //µ±Ç°¹Ø¿¨±àºÅ
+        public int levelIndex = 1;
     }
 }

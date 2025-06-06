@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static AllControl;
 public class PlayerControl : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] protected float jmpSpeed;
     [SerializeField] protected LayerMask jumpableGround;
     [SerializeField] protected float MinHeight;
+    protected bool arrowControl = false;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -25,7 +27,8 @@ public class PlayerControl : MonoBehaviour
         m_anim = gameObject.GetComponent<Animator>();
         m_sprite = gameObject.GetComponent <SpriteRenderer>();
         m_coll = gameObject.GetComponent<BoxCollider2D>();
-        spawnPoint = GameObject.Find("SpawnPoint"+m_name); 
+        spawnPoint = GameObject.Find("SpawnPoints/SpawnPoint" + m_name);
+        jumpableGround = LayerMask.GetMask("Ground");
         moveSpeed = GameManager.Instance.moveSpeed;
         jmpSpeed = GameManager.Instance.jumpSpeed;
         MinHeight = GameManager.Instance.MinHeight;
@@ -33,11 +36,13 @@ public class PlayerControl : MonoBehaviour
         {
             transform.position = spawnPoint.transform.position;
         }
+        arrowControl = (m_name == "YaYa" && SceneManager.GetActiveScene().name == "Level3");
 
     }
     protected virtual void Update()
     {
-        KeyMove();
+        if (!arrowControl) KeyMove();
+        else ArrowMove();
     }
     /// <summary>
     /// 键盘ADW控制移动跳跃，以及动画机反馈
@@ -54,7 +59,7 @@ public class PlayerControl : MonoBehaviour
             //m_anim.SetFloat("state", 2);
             //Debug.Log("W pressed");
         }
-        else if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.A))
         {
             m_rb.velocity = Vector2.left * moveSpeed * (IsGround() ? 1f : 0.5f);
             //m_anim.SetFloat("state", 1);
@@ -68,12 +73,34 @@ public class PlayerControl : MonoBehaviour
             m_sprite.flipX = false;
             //Debug.Log("D pressed");
         }
-        //else 
-        //{
-        //    m_anim.SetFloat("state", 0);
-        //}
         m_anim.SetFloat("horizontal", m_rb.velocity.x);
         m_anim.SetFloat("vertical",m_rb.velocity.y);
+        m_anim.SetFloat("speed", m_rb.velocity.magnitude);
+    }
+    protected void ArrowMove()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGround())
+        {
+            m_rb.velocity = Vector2.up * jmpSpeed;
+            //m_anim.SetFloat("state", 2);
+            //Debug.Log("W pressed");
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            m_rb.velocity = Vector2.left * moveSpeed * (IsGround() ? 1f : 0.5f);
+            //m_anim.SetFloat("state", 1);
+            m_sprite.flipX = true;
+            //Debug.Log("A pressed");
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            m_rb.velocity = Vector2.right * moveSpeed * (IsGround() ? 1f : 0.5f);
+            //m_anim.SetFloat("state", 1);
+            m_sprite.flipX = false;
+            //Debug.Log("D pressed");
+        }
+        m_anim.SetFloat("horizontal", m_rb.velocity.x);
+        m_anim.SetFloat("vertical", m_rb.velocity.y);
         m_anim.SetFloat("speed", m_rb.velocity.magnitude);
     }
     public bool IsGround()

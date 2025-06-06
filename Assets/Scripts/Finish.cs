@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static AllControl;
 
 public class Finish : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class Finish : MonoBehaviour
         Debug.Log("Level completed, loading next scene...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         LevelCompleted = false;
+        GameManager.Instance.levelIndex += 1;
     }
 }
 

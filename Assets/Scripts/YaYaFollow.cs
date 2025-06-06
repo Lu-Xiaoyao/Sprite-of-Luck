@@ -27,8 +27,8 @@ public class YaYaFollow : MonoBehaviour
         m_tran = gameObject.GetComponent<Transform>();
         m_anim = gameObject.GetComponent<Animator>();
         m_rb = gameObject.GetComponent<Rigidbody2D>();
-        spawnPoint = GameObject.Find("SpawnPointYaYa");
-        maxPoint = GameObject.Find("MaxPointYaYa");
+        spawnPoint = GameObject.Find("SpawnPoints/SpawnPointYaYa");
+        maxPoint = GameObject.Find("SpawnPoints/MaxPointYaYa");
         if (spawnPoint != null)
         {
             m_tran.position = spawnPoint.transform.position;
