@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class YaYaFollow : MonoBehaviour
 {
-    //³ÖÓÐ×é¼þ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField] protected Transform player;
     [SerializeField] protected Transform m_tran;
     protected Animator m_anim;
     protected Rigidbody2D m_rb;
     protected GameObject spawnPoint;
     protected GameObject maxPoint;
-    //¹æ¶¨ÒÆ¶¯µÄ·¶Î§
+    //ï¿½æ¶¨ï¿½Æ¶ï¿½ï¿½Ä·ï¿½Î§
     [SerializeField] protected float XMax;
     [SerializeField] protected float XMin;
     [SerializeField] protected float Y;
-    //¸úËæÏà¹Ø£º±ê×¼¾àÀëÒÔ¼°Ä¿±êÎ»ÖÃ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½Ä¿ï¿½ï¿½Î»ï¿½ï¿½
     protected float XDistince;
     protected float XTarget;
     // Start is called before the first frame update
@@ -51,7 +51,7 @@ public class YaYaFollow : MonoBehaviour
     {
         XTarget = player.position.x - XDistince;
         XTarget = XTarget > XMax ? XMax : XTarget;
-        if (Mathf.Abs(XTarget - m_tran.position.x) > 0.1f)
+        if (XTarget - m_tran.position.x > 0.1f)
         {
             m_tran.Translate(new Vector3(XTarget-m_tran.position.x, 0, 0),Space.Self);
             m_anim.SetFloat("horizontal", 1);

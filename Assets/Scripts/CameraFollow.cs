@@ -2,38 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static AllControl;
 
 public class CameraFollow : MonoBehaviour
 {
-    //³ÖÓÐ×é¼þ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private Transform m_camera;
     private Transform minPoint;
     private Transform maxPoint;
     private Transform targetPoint;
     private Transform targetPoint2;
-    //¹æ¶¨Ïà»úÒÆ¶¯µÄ·¶Î§£¬ÒÔ¼°Ïà»ú¾àÀëZ
+    //ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ä·ï¿½Î§ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Z
     [SerializeField] private float XMax;
     [SerializeField] private float YMax;
     [SerializeField] private float XMin;
     [SerializeField] private float YMin;
     [SerializeField] private float Z;
-    //Ïà»ú¸úËæÏà¹Ø£ºÄ¿±êÎ»ÖÃ£¬¸úËæ¶ÔÏóÑ¡Ôñ£¬ÒÆ¶¯ËÙ¶È
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½Ä¿ï¿½ï¿½Î»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ù¶ï¿½
     private Vector3 TargetPosition;
-    bool followPlayer = true; //falseµÄÊ±ºò¸úËæÑÅÑÅ
+    bool followPlayer = true; //falseï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField] private float cameraSpeed;
-    //ÑÓÊ±Æô¶¯Ïà»ú¸úËæ¼ÆÊ±Æ÷£¬±£Áô×î¿ªÊ¼µÄÖ÷½ÇµôÂäÐ§¹û
+    //ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¿ªÊ¼ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½Ð§ï¿½ï¿½
     private float timer;
+    private InputActions inputActions;
+    [SerializeField] private AudioSource cameraSound;
 
     // Start is called before the first frame update
     void Start()
     {
         //player = GameObject.Find("Player").transform;
         m_camera = gameObject.GetComponent<Transform>();
-        minPoint = GameObject.Find("SpawnPoints/MinPointCamera").transform;
-        maxPoint = GameObject.Find("SpawnPoints/MaxPointCamera").transform;
-        targetPoint = GameObject.Find("Player/CameraPointPlayer").transform;
-        targetPoint2 = GameObject.Find("YaYa/CameraPointYaYa").transform; 
+        minPoint = GameObject.Find("SpawnPoints").transform.Find("MinPointCamera");
+        maxPoint = GameObject.Find("SpawnPoints").transform.Find("MaxPointCamera");
+        targetPoint = GameObject.Find("Player").transform.Find("CameraPointPlayer");
+        Debug.Log(targetPoint);
+        targetPoint2 = GameObject.Find("YaYa").transform.Find("CameraPointYaYa"); 
+        Debug.Log(targetPoint2);
         if (minPoint != null)
         {
             m_camera.position = minPoint.transform.position;
@@ -49,15 +54,33 @@ public class CameraFollow : MonoBehaviour
         //P_C_Distince = targetPoint.position - m_camera.position;
         cameraSpeed = GameManager.Instance.cameraSpeed;
         timer = 1.0f;
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
+        inputActions = new InputActions();
+        if(SceneManager.GetActiveScene().name == "Level3")
         {
-            followPlayer = !followPlayer;
+            inputActions.IndivControl.Enable();
+        }
+        if(SceneManager.GetActiveScene().name == "End")
+        {
+            followPlayer = false;
             Debug.Log(followPlayer);
         }
     }
+    private void Update()
+    {
+        if (inputActions != null && inputActions.IndivControl.CameraShift.triggered)
+        {
+            cameraSound.Play();
+            followPlayer = !followPlayer;
+            //Debug.Log(followPlayer);
+        }
+    }
+    
+    public void CameraShift()
+    {
+        cameraSound.Play();
+        followPlayer = !followPlayer;
+    }
+
     private void FixedUpdate()
     {
         if (timer > 0)
@@ -72,9 +95,9 @@ public class CameraFollow : MonoBehaviour
 
     private void CameraMove()
     {
-        if(followPlayer) 
+        if(followPlayer && targetPoint != null) 
             TargetPosition = targetPoint.position;
-        else 
+        else if(!followPlayer && targetPoint2 != null) 
             TargetPosition = targetPoint2.position;
         TargetPosition.x = TargetPosition.x > XMax ? XMax : TargetPosition.x;
         TargetPosition.x = TargetPosition.x < XMin ? XMin : TargetPosition.x;

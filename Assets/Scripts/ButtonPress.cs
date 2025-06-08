@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ButtonPress : MonoBehaviour
 {
-    [SerializeField] private string username; //°´Å¥¶ÔÄÄ¸ö½ÇÉ«ÉúÐ§£¬¸ù¾Ý×ÔÉítag×Ô¶¯¼ì²â
-    [SerializeField] private List<GameObject> targets = new List<GameObject>(); //³ÖÓÐ°´Å¥Ëù²Ù×÷µÄ¶ÔÏó
+    [SerializeField] private string username; //ï¿½ï¿½Å¥ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½É«ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tagï¿½Ô¶ï¿½ï¿½ï¿½ï¿½
+    [SerializeField] private List<GameObject> targets = new List<GameObject>(); //ï¿½ï¿½ï¿½Ð°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
     private Animator m_anim;
+    [SerializeField] private AudioSource buttonSound;
     private void Start()
     {
         if (CompareTag("ButtonPink")) username = "YaYa";
@@ -23,16 +24,22 @@ public class ButtonPress : MonoBehaviour
         if(collision.gameObject.name == username && !m_anim.GetBool("Press"))
         {
             m_anim.SetBool("Press",true);
+            buttonSound.Play();
             foreach(GameObject target in targets)
             {
                 if(target.CompareTag("Barrier"))
                 {
                     target.GetComponent<BarrierVanish>().AddCount();
-                    Debug.Log("BarrierVanish Count + 1");
+                    //Debug.Log("BarrierVanish Count + 1");
                 }
                 else if(target.CompareTag("Platform"))
                 {
-                    target.GetComponent<PlatformMove>().enabled = true;
+                    target.transform.Find("Platform").GetComponent<PlatformMove>().enabled = !target.transform.Find("Platform").GetComponent<PlatformMove>().enabled;
+                    target.transform.Find("Platform").GetComponent<PlatformStick>().enabled = !target.transform.Find("Platform").GetComponent<PlatformStick>().enabled;
+                }
+                else if(target.CompareTag("Trap"))
+                {
+                    target.GetComponent<TrapControl>().AddCount();
                 }
             }
         }

@@ -6,9 +6,10 @@ using static AllControl;
 
 public class Finish : MonoBehaviour
 {
-    //ÅÐ¶¨½Å±¾¹ÒÔÚ´¥·¢Æ÷ÉÏ£¬ÓëÁ½¸öÖ÷½Ç¾ù·¢Éú´¥Åö¼´¹Ø¿¨Íê³É
+    //ï¿½Ð¶ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½ï¿½ï¿½ï¿½
     protected static internal bool LevelCompleted = false;
     private int collisionCount = 0;
+    [SerializeField] private AudioSource finishSound;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !LevelCompleted)
@@ -17,7 +18,8 @@ public class Finish : MonoBehaviour
             if(collisionCount == 2)
             {
                 LevelCompleted = true;
-                Invoke("CompleteLevel", 2f);
+                finishSound.Play();
+                Invoke("CompleteLevel", 1f);
             }
         }
     }
@@ -30,7 +32,7 @@ public class Finish : MonoBehaviour
     }
     private void CompleteLevel()
     {
-        Debug.Log("Level completed, loading next scene...");
+        //Debug.Log("Level completed, loading next scene...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         LevelCompleted = false;
         GameManager.Instance.levelIndex += 1;

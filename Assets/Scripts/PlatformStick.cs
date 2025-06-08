@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlatformStick : MonoBehaviour
 {
+    private void Start()
+    {
+        if (transform.parent != null && transform.parent.name == "Tracks")
+        {
+            this.enabled = false;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -14,9 +22,16 @@ public class PlatformStick : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject != null && collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.SetParent(null);
+            try
+            {
+                collision.gameObject.transform.SetParent(null);
+            }
+            catch (System.Exception)
+            {
+                // 忽略设置父物体时的错误
+            }
         }
     }
 }

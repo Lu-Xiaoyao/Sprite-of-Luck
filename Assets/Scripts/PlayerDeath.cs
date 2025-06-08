@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static AllControl;
 /// <summary>
-/// ¹©PlayerºÍYaYa¸´ÓÃ
+/// ï¿½ï¿½Playerï¿½ï¿½YaYaï¿½ï¿½ï¿½ï¿½
 /// </summary>
 public class PlayerDeath : MonoBehaviour
 {
@@ -15,6 +15,7 @@ public class PlayerDeath : MonoBehaviour
     protected PlayerDeath f_death;
     protected PlayerControl m_control;
     [SerializeField] protected float MinHeight;
+    [SerializeField] private AudioSource deathSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +38,11 @@ public class PlayerDeath : MonoBehaviour
     {
         if (m_transform.position.y < MinHeight)
         {
-            Die();
+            deathSound.Play();
+            Respawn();
             if (f_death != null)
             {
-                f_death.Die();
+                f_death.Respawn();
             }
         }
     }
@@ -54,37 +56,35 @@ public class PlayerDeath : MonoBehaviour
                 f_death.Die();
             }
         }
-        //if (collision.gameObject.CompareTag("Player") && Finish.LevelCompleted == false)
-        //{
-        //    Die();
-        //    if (f_death != null)
-        //    {
-        //        f_death.Die();
-        //    }
-        //}
     }
     protected internal void Die()
     {
+        deathSound.Play();
         if (spawnPoint != null)
         {
-            //m_anim.SetTrigger("death");
+            m_anim.SetTrigger("death");
             if(m_control != null)
             {
                 m_control.enabled = false;
+                m_transform.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+                m_transform.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
-            //Invoke("Respawn", 2f);
-            Respawn();
+        Invoke("Respawn",0.5f);
         }
     }
 
     protected void Respawn()
     {
-        m_anim.ResetTrigger("death");
         m_anim.SetTrigger("respawn");
         transform.position = spawnPoint.transform.position;
+        if(m_name == "Player")
+        {
+            GameManager.Instance.spawnTimes++;
+        }
         if (m_control != null)
         {
             m_control.enabled = true;
+            m_transform.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

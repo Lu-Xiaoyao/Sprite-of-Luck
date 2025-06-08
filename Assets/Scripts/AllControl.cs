@@ -6,7 +6,7 @@ public class AllControl : MonoBehaviour
 {
     public class GameManager
     {
-        //µ¥ÀıÄ£Ê½
+        //å•ä¾‹æ¨¡å¼
         private static GameManager _instance;
         public static GameManager Instance
         {
@@ -17,15 +17,20 @@ public class AllControl : MonoBehaviour
                 return _instance;
             }
         }
-        //Ë®¹ûÊıÁ¿Êı¾İ
+        //æ°´æœæ”¶é›†æ•°é‡
         public int apples = 0;
         public int berries = 0;
-        //½ÇÉ«ÒÆ¶¯ºÍ×¹ÂäÅĞ¶¨Êı¾İ
+        //è§’è‰²ç§»åŠ¨å’Œè·³è·ƒåˆ¤æ–­å‚æ•°
         public float moveSpeed = 12f;
         public float jumpSpeed = 100f;
         public float MinHeight = -6f;
-        public float cameraSpeed = 0.5f;
-        //µ±Ç°¹Ø¿¨±àºÅ
+        public float cameraSpeed = 0.1f;
+        //å½“å‰å…³å¡ç´¢å¼•
         public int levelIndex = 1;
+        public float airControlMultiplier = 1.0f;
+        public float gravityScale = 15f;
+        public int spawnTimes = 0;
+        //æ¸¸æˆæ—¶é—´
+        public float gameTime = 0f;
     }
 }

@@ -14,14 +14,18 @@ public class PlatformMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (transform.parent != null && transform.parent.name == "Tracks")
+        {
+            this.enabled = false;
+        }
         targetPoints = new List<Transform>();
         if (transform.parent != null)
         {
-            targetPoints = transform.parent.Cast<Transform>().Where(t => t != transform).ToList(); // »ñÈ¡¸¸ÎïÌåÏÂËùÓÐ×ÓÎïÌå£¬²¢ÅÅ³ý×ÔÉí
+            targetPoints = transform.parent.Cast<Transform>().Where(t => t != transform).ToList(); // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½
         }
         m_tran = gameObject.GetComponent<Transform>();
         //m_rb = gameObject.GetComponent<Rigidbody>();
-        moveSpeed = 0.008f;
+        moveSpeed = 4.5f;
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class PlatformMove : MonoBehaviour
         {
             targetIndex = (targetIndex + 1) % targetPoints.Count;
         }
-        m_tran.position = Vector2.MoveTowards(m_tran.position, targetPoints[targetIndex].position, moveSpeed);
+        m_tran.position = Vector2.MoveTowards(m_tran.position, targetPoints[targetIndex].position, moveSpeed * Time.deltaTime);
         //m_rb.velocity = new Vector2(Mathf.Sign(distance.x), Mathf.Sign(distance.y)) * moveSpeed;
     }
 }

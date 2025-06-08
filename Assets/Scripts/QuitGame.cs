@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
+    [SerializeField] private AudioSource hoverSound;
+
+    public void OnPointerEnter()
+    {
+        hoverSound.Play();
+    }
+
     public void Quit()
     {
-        // ÔÚ±à¼­Æ÷ÖĞÍ£Ö¹²¥·ÅÄ£Ê½
+        // åœ¨ç¼–è¾‘å™¨ä¸­åœæ­¢æ’­æ”¾æ¨¡å¼
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-        // ÔÚ¹¹½¨µÄÓÎÏ·ÖĞÍË³öÓ¦ÓÃ
+        // åœ¨æ„å»ºç‰ˆæœ¬ä¸­é€€å‡ºåº”ç”¨
         Application.Quit();
 #endif
     }

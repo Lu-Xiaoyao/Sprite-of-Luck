@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\GitProjects\\Sprite of Luck\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\returnbeginscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\returnbeginscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|d:\\gitprojects\\sprite of luck\\assets\\scripts\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|D:\\GitProjects\\Sprite of Luck\\assets\\scripts\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57FA84F6-DE8D-1489-FA05-0D65EA4BF2E2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -75,6 +79,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "QuitGame.cs",
+              "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\QuitGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\QuitGame.cs",
+              "ToolTip": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\QuitGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\QuitGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T15:13:33.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ReturnBeginScene.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\ReturnBeginScene.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ReturnBeginScene.cs",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StartGame.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\StartGame.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StartGame.cs",
@@ -95,12 +112,11 @@
               "RelativeToolTip": "Assets\\Scripts\\StartGame.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T15:03:37.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T15:03:37.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Input Actions.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Input Actions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Input Actions.cs",
@@ -112,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ButtonPress.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\ButtonPress.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonPress.cs",
@@ -124,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PlatformMove.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformMove.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlatformMove.cs",
@@ -136,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PlayerDeath.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerDeath.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerDeath.cs",
@@ -148,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "YaYaFollow2.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow2.cs",
@@ -160,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "YaYaFollow.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\YaYaFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\YaYaFollow.cs",
@@ -172,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AllControl.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AllControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AllControl.cs",
@@ -184,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Finish.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\Finish.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
@@ -196,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PlatformStick.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlatformStick.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlatformStick.cs",
@@ -208,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BarrierVanish.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\BarrierVanish.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BarrierVanish.cs",
@@ -220,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CameraFollow.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\CameraFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
@@ -232,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\PlayerControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl.cs",
@@ -244,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AppleCollection.cs",
               "DocumentMoniker": "D:\\GitProjects\\Sprite of Luck\\Assets\\Scripts\\AppleCollection.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AppleCollection.cs",

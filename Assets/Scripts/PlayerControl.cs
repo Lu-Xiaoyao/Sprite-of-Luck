@@ -16,89 +16,97 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] protected float jmpSpeed;
     [SerializeField] protected LayerMask jumpableGround;
     [SerializeField] protected float MinHeight;
-    protected bool arrowControl = false;
+    [SerializeField] protected float airControlMultiplier; // 空中控制系数
+    [SerializeField] protected float gravityScale; // 重力缩放
+    protected InputActions inputActions;
+    protected string currentScene;
+    [SerializeField] private AudioSource jumpSound;
 
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         m_name = gameObject.name;
         m_rb = gameObject.GetComponent<Rigidbody2D>();
         m_transform = gameObject.GetComponent<Transform>();
         m_anim = gameObject.GetComponent<Animator>();
-        m_sprite = gameObject.GetComponent <SpriteRenderer>();
+        m_sprite = gameObject.GetComponent<SpriteRenderer>();
         m_coll = gameObject.GetComponent<BoxCollider2D>();
         spawnPoint = GameObject.Find("SpawnPoints/SpawnPoint" + m_name);
-        jumpableGround = LayerMask.GetMask("Ground");
+        //jumpableGround = LayerMask.GetMask("Ground");
         moveSpeed = GameManager.Instance.moveSpeed;
         jmpSpeed = GameManager.Instance.jumpSpeed;
         MinHeight = GameManager.Instance.MinHeight;
+        
+        // 强制使用脚本中定义的默认值
+        airControlMultiplier = GameManager.Instance.airControlMultiplier;
+        gravityScale = GameManager.Instance.gravityScale;
+        m_rb.gravityScale = gravityScale;
+        
+        // 设置Rigidbody2D的碰撞检测模式为连续检测
+        m_rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        
         if (spawnPoint != null)
         {
             transform.position = spawnPoint.transform.position;
         }
-        arrowControl = (m_name == "YaYa" && SceneManager.GetActiveScene().name == "Level3");
 
+        inputActions = new InputActions();
+        currentScene = SceneManager.GetActiveScene().name;
+        
+        if (currentScene == "Level1" || currentScene == "Level2")
+        {
+            inputActions.SynchControl.Enable();
+        }
+        else if (currentScene == "Level3")
+        {
+            inputActions.IndivControl.Enable();
+        }
     }
+
     protected virtual void Update()
     {
-        if (!arrowControl) KeyMove();
-        else ArrowMove();
+        HandleMovement();
     }
-    /// <summary>
-    /// ����ADW�����ƶ���Ծ���Լ�����������
-    /// </summary>
-    protected void KeyMove()
+
+    protected void HandleMovement()
     {
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    Debug.Log("W pressed");
-        //}
-        if (Input.GetKeyDown(KeyCode.W) && IsGround())
+        Vector2 moveInput = Vector2.zero;
+        bool jumpInput = false;
+
+        if (currentScene == "Level1" || currentScene == "Level2")
+        {
+            moveInput = inputActions.SynchControl.Move.ReadValue<Vector2>();
+            jumpInput = inputActions.SynchControl.Jump.triggered;
+        }
+        else if (currentScene == "Level3")
+        {
+            if (m_name == "Player")
+            {
+                moveInput = inputActions.IndivControl.Move1.ReadValue<Vector2>();
+                jumpInput = inputActions.IndivControl.Jump1.triggered;
+            }
+            else if (m_name == "YaYa")
+            {
+                moveInput = inputActions.IndivControl.Move2.ReadValue<Vector2>();
+                jumpInput = inputActions.IndivControl.Jump2.triggered;
+            }
+        }
+
+        // 处理跳跃
+        if (jumpInput && IsGround())
         {
             m_rb.velocity = Vector2.up * jmpSpeed;
-            //m_anim.SetFloat("state", 2);
-            //Debug.Log("W pressed");
+            jumpSound.Play();
         }
-        if(Input.GetKey(KeyCode.A))
+
+        // 处理移动
+        if (moveInput.x != 0)
         {
-            m_rb.velocity = Vector2.left * moveSpeed * (IsGround() ? 1f : 0.5f);
-            //m_anim.SetFloat("state", 1);
-            m_sprite.flipX = true;
-            //Debug.Log("A pressed");
+            float moveMultiplier = IsGround() ? 1f : airControlMultiplier;
+            m_rb.velocity = new Vector2(moveInput.x * moveSpeed * moveMultiplier, m_rb.velocity.y);
+            m_sprite.flipX = moveInput.x < 0;
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            m_rb.velocity = Vector2.right * moveSpeed * (IsGround() ? 1f : 0.5f);
-            //m_anim.SetFloat("state", 1);
-            m_sprite.flipX = false;
-            //Debug.Log("D pressed");
-        }
-        m_anim.SetFloat("horizontal", m_rb.velocity.x);
-        m_anim.SetFloat("vertical",m_rb.velocity.y);
-        m_anim.SetFloat("speed", m_rb.velocity.magnitude);
-    }
-    protected void ArrowMove()
-    {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGround())
-        {
-            m_rb.velocity = Vector2.up * jmpSpeed;
-            //m_anim.SetFloat("state", 2);
-            //Debug.Log("W pressed");
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            m_rb.velocity = Vector2.left * moveSpeed * (IsGround() ? 1f : 0.5f);
-            //m_anim.SetFloat("state", 1);
-            m_sprite.flipX = true;
-            //Debug.Log("A pressed");
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            m_rb.velocity = Vector2.right * moveSpeed * (IsGround() ? 1f : 0.5f);
-            //m_anim.SetFloat("state", 1);
-            m_sprite.flipX = false;
-            //Debug.Log("D pressed");
-        }
+
+        // 更新动画参数
         m_anim.SetFloat("horizontal", m_rb.velocity.x);
         m_anim.SetFloat("vertical", m_rb.velocity.y);
         m_anim.SetFloat("speed", m_rb.velocity.magnitude);

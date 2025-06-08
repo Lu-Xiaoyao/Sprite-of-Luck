@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using static AllControl;
 /// <summary>
-/// µÚ¶þ¹ØÑÅÑÅµÄÒÆ¶¯¿ØÖÆ£¬½ö¸ºÔðÎ»ÖÃÐÞÕý£¬ÐèÒªÍ¬Ê±¹ÒÔØPlayerControl½Å±¾£¬ÊµÏÖÒÆ¶¯ÒÔ¼°¹©Playerµ÷ÓÃ
+/// ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÍ¬Ê±ï¿½ï¿½ï¿½ï¿½PlayerControlï¿½Å±ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Playerï¿½ï¿½ï¿½ï¿½
 /// </summary>
 public class YaYaFollow2 : MonoBehaviour
 {
-    //³ÖÓÐ×é¼þ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField] protected Transform player_tran;
     private Rigidbody2D m_rb;
     private Animator m_anim;
     private float moveSpeed = GameManager.Instance.moveSpeed;
-    //¸úËæÏà¹Ø£º±ê×¼¾àÀëÒÔ¼°Ä¿±êÎ»ÖÃ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½Ä¿ï¿½ï¿½Î»ï¿½ï¿½
     protected float XDistance;
     void Start()
     {
-        //¸÷ÖÖ×é¼þ³ÖÓÐ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         player_tran = GameObject.Find("Player").transform;
         m_rb = GetComponent<Rigidbody2D>();
         m_anim = GetComponent<Animator>();
@@ -28,25 +28,29 @@ public class YaYaFollow2 : MonoBehaviour
         PositionFix();
     }
     /// <summary>
-    /// ÑÅÑÅx×ø±êÎ»ÖÃ×Ô¶¯ÐÞÕý£¬Èç¹ûºÍÍæ¼Ò´í¿ª×Ô¶¯¸úËæ¹éÎ»
-    /// ²»»á×Ô¶¯ÌøÔ¾¡¢²È¿Õ»áµôÏÂÈ¥£¬ÒªÇóÍæ¼ÒÍ¬Ê±¹Ø×¢Á½ÌõÂ·¿ö
+    /// ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò´ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½È¿Õ»ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
     /// </summary>
     protected void PositionFix()
     {
-        XDistance = player_tran.position.x - transform.position.x;
-        if(XDistance > 0.5f || XDistance < -0.5f)
+        if(Mathf.Abs(player_tran.position.y - transform.position.y) > 1f)
         {
-            m_rb.velocity = new Vector2(Mathf.Sign(XDistance) * moveSpeed, m_rb.velocity.y);
+            XDistance = player_tran.position.x - transform.position.x;
+            if(XDistance > 0.5f || XDistance < -0.5f)
+            {
+                m_rb.velocity = new Vector2(Mathf.Sign(XDistance) * moveSpeed, m_rb.velocity.y);
+            }
+            //transform.Translate(new Vector3(XTarget - transform.position.x, 0, 0), Space.Self);
+            m_anim.SetFloat("horizontal", m_rb.velocity.x);
+            m_anim.SetFloat("vertical", m_rb.velocity.y);
+            m_anim.SetFloat("speed", m_rb.velocity.x + m_rb.velocity.y);
+            //Target = player.position - Distince;
+            //m_anim.SetFloat("speed", Target.x - transform.position.x + Target.y - transform.position.y);
+            //m_sprite.flipX = (Target.x < transform.position.x);
+            //m_anim.SetFloat("horizontal", Target.x - transform.position.x);
+            //m_anim.SetFloat("vertical", m_rb.velocity.y);
+            //transform.Translate(new Vector3(Target.x - transform.position.x, Target.y - transform.position.y, 0), Space.Self);            
         }
-        //transform.Translate(new Vector3(XTarget - transform.position.x, 0, 0), Space.Self);
-        m_anim.SetFloat("horizontal", m_rb.velocity.x);
-        m_anim.SetFloat("vertical", m_rb.velocity.y);
-        m_anim.SetFloat("speed", m_rb.velocity.x + m_rb.velocity.y);
-        //Target = player.position - Distince;
-        //m_anim.SetFloat("speed", Target.x - transform.position.x + Target.y - transform.position.y);
-        //m_sprite.flipX = (Target.x < transform.position.x);
-        //m_anim.SetFloat("horizontal", Target.x - transform.position.x);
-        //m_anim.SetFloat("vertical", m_rb.velocity.y);
-        //transform.Translate(new Vector3(Target.x - transform.position.x, Target.y - transform.position.y, 0), Space.Self);
+
     }
 }

@@ -8,6 +8,7 @@ public class BarrierVanish : MonoBehaviour
     //private Collider2D m_coll;
     private int activeCount = 0;
     [SerializeField] int requiredCount;
+    //[SerializeField] private AudioSource vanishSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,9 @@ public class BarrierVanish : MonoBehaviour
     {
         if(activeCount == requiredCount)
         {
+            //vanishSound.Play();
             m_anim.SetTrigger("Vanish");
+            activeCount++;
             //m_coll.enabled = false;
         }
     }
